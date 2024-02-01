@@ -65,21 +65,29 @@ button:hover {
 </form>
 
     <?php
-    session_start();
-    if (isset($_POST['clear_comments'])) {
-        $_SESSION['comments4'] = [];  // Clear the comments
-    }
-    if (!isset($_SESSION['comments4'])) {
-        $_SESSION['comments4'] = [];
-    }
+session_start();
+if (isset($_POST['clear_comments'])) {
+    $_SESSION['comments4'] = [];  // Clear the comments
+}
+if (!isset($_SESSION['comments4'])) {
+    $_SESSION['comments4'] = [];
+}
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
-        $_SESSION['comments4'][] = $_POST['comment'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['comment'])) {
+    $comment = $_POST['comment'];
+    // Validate that every opened div is properly closed
+    if (substr_count($comment, "<div>") === substr_count($comment, "</div>")) {
+        $_SESSION['comments4'][] = $comment;
+    } else {
+        // Optionally, store an error message or handle invalid input as needed
+        echo "ما قولنا باب المطبخ يا عبير";
     }
+}
 
-    foreach ($_SESSION['comments4'] as $comment) {
-        echo "<div class='user-comment'>" . $comment . "</div>";
-    }
+foreach ($_SESSION['comments4'] as $comment) {
+    echo "<input class='user-comment' value='" .$comment."'" ."</input>";
+}
+
     ?>
 </body>
 </html>
