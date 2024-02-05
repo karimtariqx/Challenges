@@ -93,5 +93,4 @@ foreach ($_SESSION['comments4'] as $comment) {
 </html>
 
 
-<!--</div><script>alert('XSS');</script><div>
--->
+
