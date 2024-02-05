@@ -88,5 +88,5 @@ button:hover {
 </body>
 </html>
 
-<!--JSMAN
+<!--JSM
 -->
