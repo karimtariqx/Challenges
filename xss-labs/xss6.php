@@ -93,4 +93,3 @@ foreach ($_SESSION['comments6'] as $comment) {
 </body>
 </html>
 
-<!--img-->
