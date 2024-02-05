@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['comment'])) {
 
 
 foreach ($_SESSION['comments2'] as $comment) {
-    echo "<div>" . $comment . "</div>"; // Display the comment
+    echo "<div>" . $comment . "</div>"; // SUE
 }
 ?>
 
@@ -97,4 +97,3 @@ foreach ($_SESSION['comments2'] as $comment) {
 </html>
 
 
-<!--double url Encoding-->
