@@ -88,5 +88,5 @@ button:hover {
 </body>
 </html>
 
-<!--'; alert('XSS'); var ignore='
+<!--JSMAN
 -->
